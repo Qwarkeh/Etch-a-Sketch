@@ -1,17 +1,15 @@
 createBoard();
 reset();
 
-function createRow(startingClass) {
+function createRow(width) {
     const container = document.querySelector('div');
 
     const row = document.createElement('div')
     row.classList.add('row');
     container.appendChild(row);
 
+        //TODO: set up to take width
         for (let i = 0; i < 16; i++) {
-
-            const newClass = startingClass + i;
-
             const square = document.createElement('div');
             square.classList.add('square');
             row.appendChild(square);
@@ -22,12 +20,10 @@ function createRow(startingClass) {
         }
 };
 
+//TODO: set up to take width
 function createBoard() {
-    
-    let startModifer = 1;
     for (let i = 0; i < 16; i++) {
-        createRow(startModifer);
-        startModifer += 16;
+        createRow();
     };
 };
 
