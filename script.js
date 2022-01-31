@@ -1,4 +1,5 @@
 createBoard();
+reset();
 
 function createRow(startingClass) {
     const container = document.querySelector('div');
@@ -13,14 +14,9 @@ function createRow(startingClass) {
 
             const square = document.createElement('div');
             square.classList.add('square');
-            square.classList.add(`sq-${newClass}`);
-            square.textContent = `${newClass}`
             row.appendChild(square);
 
-            //square.onclick = () => square.style.background = 'black';
-
             square.addEventListener('mouseover', event => {
-                console.log('enter');
                 square.style.background = 'black';
             });
         }
@@ -35,3 +31,10 @@ function createBoard() {
     };
 };
 
+function reset() {
+    const reset= document.querySelector('#reset');
+    
+    reset.addEventListener('click', () => {
+        console.log('clicked');
+    })
+}
