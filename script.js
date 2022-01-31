@@ -19,4 +19,16 @@ function createRow(startingClass) {
             }
 };
 
-createRow(1);
+function createBoard() {
+    
+    let startModifer = 1;
+    for (let i = 0; i < 16; i++) {
+        createRow(startModifer);
+        startModifer += 16;
+    }
+
+
+
+};
+
+createBoard();
