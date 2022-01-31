@@ -5,15 +5,12 @@ function createRow(startingClass) {
     row.classList.add('row');
     container.appendChild(row);
 
-        
         for (let i = 0; i < 16; i++) {
 
             const newClass = startingClass + i;
 
             const square = document.createElement('div');
             square.classList.add(`sq-${newClass}`);
-            square.style.height = '30px';
-            square.style.width = '30px';
             square.textContent = `${newClass}`
             row.appendChild(square);
             }

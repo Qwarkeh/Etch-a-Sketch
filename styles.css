@@ -24,6 +24,8 @@ body {
     border: solid thin gray;
     padding: 0;
     margin: 0;
+    height: 30px;
+    width: 30px;
     font-size: small;
     text-align: center;
 }
