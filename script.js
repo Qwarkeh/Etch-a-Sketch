@@ -1,4 +1,4 @@
-createBoard();
+createBoard(6);
 reset();
 
 function createRow(width) {
@@ -8,8 +8,7 @@ function createRow(width) {
     row.classList.add('row');
     container.appendChild(row);
 
-        //TODO: set up to take width
-        for (let i = 0; i < 16; i++) {
+        for (let i = 0; i < width; i++) {
             const square = document.createElement('div');
             square.classList.add('square');
             row.appendChild(square);
@@ -20,17 +19,18 @@ function createRow(width) {
         }
 };
 
-//TODO: set up to take width
-function createBoard() {
-    for (let i = 0; i < 16; i++) {
-        createRow();
+function createBoard(width) {
+    for (let i = 0; i < width; i++) {
+        createRow(width);
     };
 };
 
 function reset() {
-    const reset= document.querySelector('#reset');
     
+    const reset = document.querySelector('#reset');
+
     reset.addEventListener('click', () => {
         console.log('clicked');
-    })
+
+    });
 }
