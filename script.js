@@ -10,8 +10,8 @@ function createRow(startingClass) {
 
             const newClass = startingClass + i;
 
-            const square = document.createElement('button');
-            square.classList.add(`btn${newClass}`);
+            const square = document.createElement('div');
+            square.classList.add(`sq-${newClass}`);
             square.style.height = '30px';
             square.style.width = '30px';
             square.textContent = `${newClass}`
@@ -26,9 +26,6 @@ function createBoard() {
         createRow(startModifer);
         startModifer += 16;
     }
-
-
-
 };
 
 createBoard();
