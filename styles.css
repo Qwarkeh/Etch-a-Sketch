@@ -1,38 +1,61 @@
 body {
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     min-height: 100vh;
     background-color: lightslategray;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background: black;
+    border: solid;
+    padding: 10px;
+}
+
+.footer {
+    padding-bottom: 0;
 }
 
 .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     padding: 0;
     margin: 0;
-    border: solid thin;
+    height: 502px;
+    width: 502px;
+    border: solid white;
+    background-color: black;
 }
 
 .row {
     display: flex;
     padding: 0;
     margin: 0;
-    border: solid red;
+    width: 502px;
+    height: 502px;
+
 }
 
 .container .row div {
+    display: flex;
+    flex-grow: 1;
     padding: 0;
     margin: 0;
-    height: 10px;
-    width: 10px;
-    font-size: small;
-    text-align: center;
 }
 
 button {
-    margin: 15px;
+    margin: 60px;
+    width: 80px;
+    color: white;
+    background-color: black;
+    border: solid;
+    padding: 10px;
+    font-weight:800;
 }
